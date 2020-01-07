@@ -42,7 +42,7 @@ $(function () {
       $('#luckyDrawing').show().next().addClass('hide');
       move();
       $('#btnStart').text('停止');
-      // $('#bgLuckyDrawEnd').removeClass('bg');
+      $('#bgLuckyDrawEnd').removeClass('bg');
     }
     else {
       $('#btnStart').text('开始');//设置按钮文本为开始
@@ -53,7 +53,7 @@ $(function () {
       clearInterval(timer);//停止输入框动画展示
       $('#luckyDrawing').val(luckyMan[luckyMan.length - 1]);//输入框显示最后一个中奖名字
       $('#result').fadeIn().find('div').removeClass().addClass('p' + luckyDrawNum);//隐藏输入框，显示中奖框
-      // $('#bgLuckyDrawEnd').addClass('bg');//添加中奖背景光辉
+      $('#bgLuckyDrawEnd').addClass('bg');//添加中奖背景光辉
       $('#txtNum').attr('placeholder', '输入中奖人数(' + remainPerson.length + ')');
     }
   });
@@ -72,7 +72,7 @@ $(function () {
       $('#showName').val('');
       //隐藏中奖名单,然后显示抽奖框
       $('#result').fadeOut();//.prev().fadeIn()
-      // $('#bgLuckyDrawEnd').removeClass('bg');//移除背景光辉
+      $('#bgLuckyDrawEnd').removeClass('bg');//移除背景光辉
       times++;
       console.log(times);
 
@@ -92,6 +92,15 @@ function startLuckDraw() {
   var randomPerson = getRandomArrayElements(remainPerson, luckyDrawNum);
   var tempHtml = '';
   $.each(randomPerson, function (i, person) {
+    // let pid = person.split('KYY')[1];
+    // if (pid && pid < 10) {
+    //   let sizeStyle = 'style="text-align:left"';
+    //   tempHtml += '<span><span ' + sizeStyle + '>' + person + '</span></span>';
+    //   console.log(tempHtml);
+    // } else {
+      tempHtml += '<span><span>' + person + '</span></span>';
+    // }
+
     // var sizeStyle = '';
     // if (person.length > 3) {
     //   sizeStyle = ' style=font-size:' + 3 / person.length + 'em';
@@ -100,7 +109,6 @@ function startLuckDraw() {
     //   tempHtml += '<span><span ' + sizeStyle + '><b>' + person + '</b></span></span>';
     // }
     // else {
-    tempHtml += '<span><span>' + person + '</span></span>';
     // }
   });
   $('#result>div').html(tempHtml);
