@@ -92,14 +92,14 @@ function startLuckDraw() {
   var randomPerson = getRandomArrayElements(remainPerson, luckyDrawNum);
   var tempHtml = '';
   $.each(randomPerson, function (i, person) {
-    // let pid = person.split('KYY')[1];
-    // if (pid && pid < 10) {
-    //   let sizeStyle = 'style="text-align:left"';
-    //   tempHtml += '<span><span ' + sizeStyle + '>' + person + '</span></span>';
-    //   console.log(tempHtml);
-    // } else {
+    let pid = person.split('KYY')[1];
+    if (pid && pid < 10) {
+      let sizeStyle = 'style="margin: 0 0 0 -1.1rem;"';
+      tempHtml += '<span><span ' + sizeStyle + '>' + person + '</span></span>';
+      console.log(tempHtml);
+    } else {
       tempHtml += '<span><span>' + person + '</span></span>';
-    // }
+    }
 
     // var sizeStyle = '';
     // if (person.length > 3) {

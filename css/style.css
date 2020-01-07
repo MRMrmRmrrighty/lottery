@@ -66,12 +66,13 @@ html {
 #bgLuckyDrawEnd {
   z-index: -10;
   position: absolute;
-  width: 50rem;
-  height: 50rem;
+  width: 100rem;
+  height: 100rem;
 }
 #bgLuckyDrawEnd.bg {
-  position: absolute;
+  margin: 0 0 0 1rem;
   background: url(img/bgLight.png) no-repeat center center;
+  background-size: cover;
   -webkit-animation: lightAnimation 5s infinite linear;
   -moz-animation: lightAnimation 5s infinite linear;
   -o-animation: lightAnimation 5s infinite linear;
