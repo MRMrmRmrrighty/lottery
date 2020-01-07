@@ -1,7 +1,8 @@
 ﻿//抽奖人员名单
+var prefix = 'KYY';
 var allPerson = '';
 for (let i = 1; i < 98; i++) {
-  allPerson += 'KYY' + i + ';';
+  allPerson += prefix + i + ';';
 }
 //领导人员名单
 var leaderArr = [];
@@ -20,9 +21,20 @@ $(document).ready(function () {
 });
 $(function () {
   iconAnimation();
-
+  // 空格模拟
+  $(document).keydown(function (e) {
+    var e = e || window.event;
+    if (e.keyCode == 32)//空格
+    {
+      $('#btnStart').click();
+    }
+  });
   //开始抽奖
   $('#btnStart').on('click', function () {
+    //有弹窗则销毁
+    if ($('.Dialog').length) {
+      DestroyDialog();
+    }
     //判断是开始还是结束
     if ($('#btnStart').text() === '开始') {
       if (!$('#txtNum').val()) {
@@ -92,7 +104,7 @@ function startLuckDraw() {
   var randomPerson = getRandomArrayElements(remainPerson, luckyDrawNum);
   var tempHtml = '';
   $.each(randomPerson, function (i, person) {
-    let pid = person.split('KYY')[1];
+    let pid = person.split(prefix)[1];
     if (pid && pid < 10) {
       let sizeStyle = 'style="margin: 0 0 0 -1.1rem;"';
       tempHtml += '<span><span ' + sizeStyle + '>' + person + '</span></span>';
