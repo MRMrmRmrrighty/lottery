@@ -11,7 +11,7 @@
 未中奖数据会存在localStorage中
 
 调用库： js:jquery css:animation
-
+ 
 ## 文件结构：
 
 \index.html 抽奖主界面
@@ -38,4 +38,4 @@ lottery是基于gavinjzx的 https://github.com/gavinjzx/luckyDraw 改造而来
 抽奖逻辑基本不变，增加了一些功能，更多的改变了UI
 
 ## 适配
-目前没去做更多的适配:PC端web 1920*1080体验最佳
+目前没去做更多的适配:PC端web 1920*1080全屏模式体验最佳
