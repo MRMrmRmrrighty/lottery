@@ -1,0 +1,126 @@
+#bgLuckyDrawEnd {
+  position: absolute;
+  z-index: -10;
+  &.bg {
+    position: absolute;
+    top: 30em;
+    background: url(img/bgLight.png) no-repeat center center;
+    -webkit-animation: lightAnimation 5s infinite linear;
+    -moz-animation: lightAnimation 5s infinite linear;
+    -o-animation: lightAnimation 5s infinite linear;
+    animation: lightAnimation 5s infinite linear;
+  }
+}
+
+#iconDiv {
+  position: absolute;
+  left: 50%;
+  width: 800px;
+  margin-left: -400px;
+  z-index: -100;
+  > span {
+    position: absolute;
+    &:nth-child(1) {
+      left: 126px;
+      top: 169px;
+    }
+    &:nth-child(2) {
+      left: 210px;
+      top: 103px;
+    }
+    &:nth-child(3) {
+      left: 292px;
+      top: 25px;
+    }
+    &:nth-child(4) {
+      left: 432px;
+      top: 54px;
+    }
+    &:nth-child(5) {
+      left: 545px;
+      top: 107px;
+    }
+    &:nth-child(6) {
+      left: 561px;
+      top: 163px;
+    }
+
+  }
+}
+
+.lightAnimation() {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes lightAnimation {
+  .lightAnimation();
+}
+
+@-webkit-keyframes lightAnimation {
+  .lightAnimation();
+}
+
+@-webkit-keyframes lanternSwingL {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(4deg);
+  }
+}
+
+@-webkit-keyframes lanternSwingR {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+  }
+}
+
+@-webkit-keyframes upDown {
+  from {
+    transform: translate(0px, 0px)
+  }
+  to {
+    transform: translate(0px, 15px)
+  }
+}
+
+@-webkit-keyframes upDownL {
+  0% {
+    transform: translate(0px, 0px)
+  }
+  50% {
+    transform: translate(0px, 10px)
+  }
+  100% {
+    transform: translate(0px, 0px)
+  }
+}
+
+@-webkit-keyframes upDownR {
+  0% {
+    transform: translate(0px, 0px)
+  }
+  50% {
+    transform: translate(10px, 0px)
+  }
+  100% {
+    transform: translate(0px, 0px)
+  }
+}

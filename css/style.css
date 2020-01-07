@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑", "黑体", arial;
+}
+html {
+  height: 100%;
+  font-size: 12px;
+}
+:focus {
+  outline: none;
+  border: none;
+}
+button {
+  color: white;
+}
+.hide {
+  display: none;
+}
+html {
+  height: 100%;
+}
+.Dialog,
+.Confirm {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 100;
+  display: table;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+.Dialog > div,
+.Confirm > div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+}
+.Dialog > div > div,
+.Confirm > div > div {
+  background: #fff;
+  padding: 2rem;
+  width: 50rem;
+  margin: 0 auto;
+  color: #023e73;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+.Dialog > div > div button,
+.Confirm > div > div button {
+  display: inline-block;
+  margin: 2rem 1rem 0 1rem;
+  background: #FFC21C;
+  padding: 1rem 5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+}
+#bgLuckyDrawEnd {
+  position: absolute;
+  z-index: -10;
+}
+#bgLuckyDrawEnd.bg {
+  position: absolute;
+  top: 30em;
+  background: url(img/bgLight.png) no-repeat center center;
+  -webkit-animation: lightAnimation 5s infinite linear;
+  -moz-animation: lightAnimation 5s infinite linear;
+  -o-animation: lightAnimation 5s infinite linear;
+  animation: lightAnimation 5s infinite linear;
+}
+#iconDiv {
+  position: absolute;
+  left: 50%;
+  width: 800px;
+  margin-left: -400px;
+  z-index: -100;
+}
+#iconDiv > span {
+  position: absolute;
+}
+#iconDiv > span:nth-child(1) {
+  left: 126px;
+  top: 169px;
+}
+#iconDiv > span:nth-child(2) {
+  left: 210px;
+  top: 103px;
+}
+#iconDiv > span:nth-child(3) {
+  left: 292px;
+  top: 25px;
+}
+#iconDiv > span:nth-child(4) {
+  left: 432px;
+  top: 54px;
+}
+#iconDiv > span:nth-child(5) {
+  left: 545px;
+  top: 107px;
+}
+#iconDiv > span:nth-child(6) {
+  left: 561px;
+  top: 163px;
+}
+@keyframes lightAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes lightAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes lanternSwingL {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(4deg);
+  }
+}
+@-webkit-keyframes lanternSwingR {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+  }
+}
+@-webkit-keyframes upDown {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 15px);
+  }
+}
+@-webkit-keyframes upDownL {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes upDownR {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+body {
+  background: url(img/bg.png) no-repeat 100% 100%;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+body > header {
+  width: 100%;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+}
+body > header .headDecorate {
+  width: 100%;
+  height: 67rem;
+  background: url(img/top-bg-l.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  animation: upDownL 3s ease-in-out 1s infinite alternate;
+  z-index: 2;
+}
+body > header .headDecorate:last-child {
+  z-index: 3;
+  width: 69%;
+  height: 61rem;
+  background: url(img/top-bg-r.png) no-repeat;
+  animation: upDownR 2.5s ease-in-out 1s infinite alternate;
+  background-size: cover;
+  background-position: center;
+}
+body > section {
+  display: flex;
+  justify-content: center;
+}
+body > section > .panelCon {
+  background: url(img/main-bg.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  bottom: 3rem;
+  width: 160rem;
+  height: 62rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body > section > .panelCon > section {
+  background: rgba(0, 0, 0, 0);
+  width: 45.5rem;
+  height: 15rem;
+  margin: 14.5rem -4.5rem 0 0rem;
+  vertical-align: middle;
+  text-align: center;
+}
+body > section > .panelCon > section .lantern {
+  z-index: 2;
+  pointer-events: none;
+  width: 12rem;
+  height: 28rem;
+  background: url(img/lantern-l.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 19rem;
+  left: 43rem;
+  transform-origin: 50% 0%;
+  animation: lanternSwingL 3s ease-in-out 2s infinite alternate;
+}
+body > section > .panelCon > section .lantern:last-child {
+  height: 27rem;
+  background: url(img/lantern-r.png) no-repeat;
+  background-size: contain;
+  top: 20rem;
+  left: 105rem;
+  animation: lanternSwingR 3s ease-in-out 2s infinite alternate;
+}
+body > section > .panelCon > section #luckyDrawing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0rem -6.5rem;
+  width: 18rem;
+  height: 8rem;
+}
+body > section > .panelCon > section #luckyDrawing input {
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+body > section > .panelCon > section > #result {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: table;
+}
+body > section > .panelCon > section > #result > div {
+  display: table-cell;
+  vertical-align: middle;
+  color: black;
+}
+body > section > .panelCon > section > #result > div > span {
+  display: block;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 14.28571%;
+}
+body > section > .panelCon > section > #result > div > span > b {
+  color: #1D6DCD;
+}
+body > section > .panelCon > section > #result > div.p1 > span {
+  width: 100%;
+  font-size: 8rem;
+}
+body > section > .panelCon > section > #result > div.p2 > span {
+  width: 50%;
+  font-size: 4rem;
+}
+body > section > .panelCon > section > #result > div.p3 > span {
+  width: 33.333333%;
+  font-size: 3.5rem;
+}
+body > section > .panelCon > section > #result > div.p4 > span {
+  width: 25%;
+  font-size: 3rem;
+}
+body > section > .panelCon > section > #result > div.p5 > span,
+body > section > .panelCon > section > #result > div.p6 > span,
+body > section > .panelCon > section > #result > div.p7 > span,
+body > section > .panelCon > section > #result > div.p8 > span,
+body > section > .panelCon > section > #result > div.p9 > span,
+body > section > .panelCon > section > #result > div.p10 > span {
+  width: 25%;
+  font-size: 2.5rem;
+}
+body > section > .panelCon > section > #result > div.p11 > span,
+body > section > .panelCon > section > #result > div.p12 > span,
+body > section > .panelCon > section > #result > div.p13 > span,
+body > section > .panelCon > section > #result > div.p14 > span,
+body > section > .panelCon > section > #result > div.p15 > span,
+body > section > .panelCon > section > #result > div.p16 > span,
+body > section > .panelCon > section > #result > div.p17 > span,
+body > section > .panelCon > section > #result > div.p18 > span,
+body > section > .panelCon > section > #result > div.p19 > span,
+body > section > .panelCon > section > #result > div.p20 > span,
+body > section > .panelCon > section > #result > div.p21 > span,
+body > section > .panelCon > section > #result > div.p22 > span,
+body > section > .panelCon > section > #result > div.p23 > span,
+body > section > .panelCon > section > #result > div.p24 > span,
+body > section > .panelCon > section > #result > div.p25 > span {
+  width: 20%;
+  font-size: 2rem;
+}
+body > section > .panelCon > footer {
+  width: 49rem;
+  margin: 0 0 0 5rem;
+  text-align: center;
+  vertical-align: middle;
+  padding: 3rem 0 0 0;
+}
+body > section > .panelCon > footer > div {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0);
+}
+body > section > .panelCon > footer > div > input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 13rem;
+  margin-right: 2rem;
+}
+body > section > .panelCon > footer > div > button {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+body > section > .panelCon > footer > div > button#btnStart {
+  width: 30rem;
+  margin-right: 1rem;
+  color: white;
+}
+body > section > .panelCon > footer > div > button#btnReset {
+  width: 3rem;
+  /* height: 2.5rem; */
+  border-radius: 50%;
+  padding: 0;
+  display: inline-block;
+}
+body > footer {
+  width: 100%;
+  pointer-events: none;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 24rem;
+}
+body > footer .footBg {
+  position: fixed;
+  bottom: 0;
+  background: url(img/foot.png) repeat-x;
+  width: 100%;
+  height: 3rem;
+  background-size: contain;
+}
+body > footer .footDecorate {
+  width: 100%;
+  height: 24rem;
+  background: url(img/foot-bg.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  animation: upDown 2s ease-in-out 1.5s infinite alternate;
+  z-index: 2;
+}
+body > footer .footDecorate:last-child {
+  z-index: 3;
+  width: 20rem;
+  margin: 0 0 0 10rem;
+  height: 35rem;
+  background: url(img/foot-cloud.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  animation: upDown 2.5s ease-in-out 2s infinite alternate;
+}
+/*# sourceMappingURL=style.css.map */
