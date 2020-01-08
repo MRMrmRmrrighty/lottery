@@ -3,7 +3,7 @@
 很简单的一套抽奖程序，公司设计师在设计时用的更多的是国风的元素，还是比较美观的
 
 ## 使用方法：
-![image](https://thumbs.gfycat.com/HugeRewardingAstarte-size_restricted.gif)
+![image](https://github.com/MRMrmRmrrighty/lottery/blob/master/lottery.gif)
 
 输入人数，点击开始键（或按空格键）开始，点击停止键停止
 
