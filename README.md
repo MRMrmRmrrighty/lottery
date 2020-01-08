@@ -3,7 +3,7 @@
 很简单的一套抽奖程序，公司设计师在设计时用的更多的是国风的元素，还是比较美观的
 
 ## 使用方法：
-![image](https://github.com/MRMrmRmrrighty/lottery/blob/master/lottery.gif)
+![lgRuiF.gif](https://s2.ax1x.com/2020/01/08/lgRuiF.gif)
 
 输入人数，点击开始键（或按空格键）开始，点击停止键停止
 
