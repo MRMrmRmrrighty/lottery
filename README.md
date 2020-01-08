@@ -3,12 +3,13 @@
 很简单的一套抽奖程序，公司设计师在设计时用的更多的是国风的元素，还是比较美观的
 
 ## 使用方法：
+![image](https://thumbs.gfycat.com/HugeRewardingAstarte-size_restricted.gif)
 
 输入人数，点击开始键（或按空格键）开始，点击停止键停止
 
-点击重置按钮，奖池回归
-
 未中奖数据会存在localStorage中
+
+点击重置按钮，奖池回归
 
 调用库： js:jquery css:animation
  
