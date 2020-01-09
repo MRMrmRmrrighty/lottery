@@ -1,7 +1,8 @@
 ﻿//抽奖人员名单
 var prefix = 'KYY';
+var personNum = 94;
 var allPerson = '';
-for (let i = 1; i < 98; i++) {
+for (let i = 1; i < personNum + 1; i++) {
   allPerson += prefix + i + ';';
 }
 //领导人员名单
@@ -41,8 +42,8 @@ $(function () {
         showDialog('请输入中奖人数');
         return false;
       }
-      if ($('#txtNum').val() > 49) {
-        showDialog('一次最多只能输入49人');
+      if ($('#txtNum').val() > Math.floor(personNum / 2)) {
+        showDialog(`一次最多只能输入${Math.floor(personNum / 2)}人`);
         return false;
       }
       if ($('#txtNum').val() > remainPerson.length) {
